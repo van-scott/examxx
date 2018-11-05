@@ -4,7 +4,7 @@ Navicat MySQL Data Transfer
 Source Server         : localhost
 Source Server Version : 50617
 Source Host           : localhost:3306
-Source Database       : examxx
+Source Database       : netschool-exam
 
 Target Server Type    : MYSQL
 Target Server Version : 50617
