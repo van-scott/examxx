@@ -133,7 +133,7 @@ String basePath = request.getScheme() + "://"
 			</div>
 
 		</div>
-		<footer>
+		<!-- <footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -147,7 +147,7 @@ String basePath = request.getScheme() + "://"
 
 			</div>
 
-		</footer>
+		</footer> -->
 
 		<!-- Slider Ends -->
 

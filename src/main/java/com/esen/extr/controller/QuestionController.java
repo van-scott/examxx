@@ -418,25 +418,21 @@ public class QuestionController {
 		model.addAttribute("pageStr", pageStr);
 		return "admin/field-list";
 	}
-	
-	@RequestMapping(value = "/admin/point-list-{fieldId}-{index}", method = RequestMethod.GET)
-	public String knowledgePointPage(Model model,@PathVariable("fieldId") int fieldId,@PathVariable("index") int index){
+	@RequestMapping(value = "/admin/field-list-sub-{index}", method = RequestMethod.GET)
+	public String fieldListSubPage(Model model,@PathVariable("index") int index){
 		
-		Page<KnowledgePoint> page = new Page<KnowledgePoint>();
+		Page<Field> page = new Page<Field>();
 		page.setPageNo(index);
 		page.setPageSize(8);
-		
-		List<Field> fieldList = questionService.getAllField(null);
-		
-		List<KnowledgePoint> pointList = questionService.getKnowledgePointByFieldId(fieldId,page);
+		List<Field> fieldList = questionService.getAllField(page);
 		String pageStr = PagingUtil.getPageBtnlink(index,
 				page.getTotalPage());
-		model.addAttribute("pointList", pointList);
 		model.addAttribute("fieldList", fieldList);
-		model.addAttribute("fieldId", fieldId);
 		model.addAttribute("pageStr", pageStr);
-		return "admin/point-list";
+		return "admin/sub/field-list-sub";
 	}
+	
+	
 	
 	@RequestMapping(value = "/admin/add-point", method = RequestMethod.GET)
 	public String addPointPage(Model model){
@@ -585,4 +581,30 @@ public class QuestionController {
 		return message;
 	}
 	
+	@RequestMapping(value = "/admin/point-list-{fieldId}-{index}", method = RequestMethod.GET)
+	public String knowledgePointPage(Model model,@PathVariable("fieldId") int fieldId,@PathVariable("index") int index){
+		
+		Page<KnowledgePoint> page = new Page<KnowledgePoint>();
+		page.setPageNo(index);
+		page.setPageSize(8);
+		
+		List<Field> fieldList = questionService.getAllField(null);
+		
+		List<KnowledgePoint> pointList = questionService.getKnowledgePointByFieldId(fieldId,page);
+		String pageStr = PagingUtil.getPageBtnlink(index,
+				page.getTotalPage());
+		model.addAttribute("pointList", pointList);
+		model.addAttribute("fieldList", fieldList);
+		model.addAttribute("fieldId", fieldId);
+		model.addAttribute("pageStr", pageStr);
+		return "admin/point-list";
+	}
+	
+	
+	@RequestMapping(value = "/admin/add-field-sub", method = RequestMethod.GET)
+	public String addFieldSubPage(Model model){
+		
+		
+		return "admin/sub/add-field-sub";
+	}
 }

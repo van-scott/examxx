@@ -13,14 +13,12 @@ import org.springframework.security.authentication.AuthenticationServiceExceptio
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.util.StringUtils;
 
 import com.esen.extr.domain.user.User;
-import com.esen.extr.security.UserDetailsServiceImpl;
 import com.esen.extr.security.UserInfo;
 import com.esen.extr.service.UserService;
 import com.esen.extr.util.StandardPasswordEncoderForSha1;

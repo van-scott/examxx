@@ -10,7 +10,7 @@
 
 .container{
   max-width: none !important;
-  width: 970px;
+  /* width: 970px; */
 }
 
 /* Demonstrate the grids */

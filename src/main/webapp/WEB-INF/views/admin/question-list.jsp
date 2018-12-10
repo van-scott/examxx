@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</style>
 	</head>
 	<body>
-		<header>
+	<%-- <header>
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-5">
@@ -102,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</nav>
 			</div>
 		</div>
-
+ --%>
 		<!-- Navigation bar ends -->
 
 		<!-- Slider starts -->
@@ -312,7 +312,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 
-		<footer>
+	<!-- 	<footer>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -327,7 +327,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 
 		</footer>
-
+ -->
 		<!-- Slider Ends -->
 
 		<!-- Javascript files -->
